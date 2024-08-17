@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #162688;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.admin-panel {
+    padding: 20px;
+}
+
+.course-form {
+    margin-bottom: 20px;
+}
+
+.course-form input, .course-form textarea {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.course-form button {
+    background-color: #162688;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.course-form button:hover {
+    background-color: #0b1e57;
+}
+
+.course-table {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.course-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.course-table th, .course-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.course-table th {
+    background-color: #162688;
+    color: #fff;
+}
+
+.course-table td img {
+    max-width: 100px;
+}
+
+.course-table button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.course-table button.edit {
+    background-color: #f39c12;
+}
+
+.course-table button.edit:hover {
+    background-color: #e67e22;
+}
+
+.course-table button.delete:hover {
+    background-color: #c0392b;
+}

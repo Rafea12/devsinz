@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/tests.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Course Management Dashboard</h1>
+        <div class="navbar-icons">
+            <span class="icon">🔔</span> <!-- Notification icon -->
+            <span class="icon">⚙️</span> <!-- Settings icon -->
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Course Management</h2>
+        <ul>
+            <li><a href="#" onclick="showSection('dashboard')">Dashboard</a></li>
+            <li><a href="#" onclick="showSection('courses')">Courses</a></li>
+            <li><a href="#" onclick="showSection('notifications')">Notifications</a></li>
+            <li><a href="#" onclick="showSection('certificates')">Certificates</a></li>
+            <li><a href="#" onclick="showSection('tests')">Tests</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Dashboard Overview -->
+        <div id="dashboard" class="section">
+            <header>
+                <h1>Dashboard Overview</h1>
+            </header>
+            <!-- Cards Section -->
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Students</h3>
+                    <p>1,240</p>
+                </div>
+                <div class="card">
+                    <h3>Total Courses</h3>
+                    <p>45</p>
+                </div>
+                <div class="card">
+                    <h3>New Notifications</h3>
+                    <p>8</p>
+                </div>
+                <div class="card">
+                    <h3>Certificates Awarded</h3>
+                    <p>150</p>
+                </div>
+            </div>
+            <!-- Manage Students -->
+            <section class="crud-section">
+                <h2>Manage Students</h2>
+                <div class="crud-form">
+                    <input type="text" id="studentName" placeholder="Student Name">
+                    <input type="text" id="studentCourse" placeholder="Course">
+                    <button onclick="addStudent()" id="addButton">Add Student</button>
+                    <button onclick="updateStudent()" id="updateButton" style="display: none;">Update Student</button>
+                </div>
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                            <th>Course</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Students will be added here dynamically -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Other Sections (placeholders) -->
+        
+        <!-- Tests Section -->
+<div id="tests" class="section" style="display: none;">
+    <header><h1>Tests</h1></header>
+
+    <!-- Add Quiz Section -->
+    <section class="crud-section">
+        <h2>Add Quiz</h2>
+        <div class="crud-form">
+            <input type="text" id="quizTitle" placeholder="Quiz Title">
+            <textarea id="quizDescription" placeholder="Quiz Description"></textarea>
+            <button onclick="addQuiz()" id="addQuizButton">Add Quiz</button>
+        </div>
+        <table id="quizTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Quizzes will be added here dynamically -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Add Video Section -->
+    <section class="crud-section">
+        <h2>Add Video</h2>
+        <div class="crud-form">
+            <input type="text" id="videoTitle" placeholder="Video Title">
+            <input type="text" id="videoURL" placeholder="Video URL">
+            <button onclick="addVideo()" id="addVideoButton">Add Video</button>
+        </div>
+        <table id="videoTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>URL</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Videos will be added here dynamically -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Quiz Result Section -->
+    <section class="crud-section">
+        <h2>Quiz Results</h2>
+        <div id="quizResult">
+            <p id="resultMessage"></p>
+            <p id="percentage"></p>
+        </div>
+    </section>
+</div>
+
+        <div id="certificates" class="section" style="display: none;">
+            <header><h1>Certificates</h1></header>
+            <!-- Certificates Content Here -->
+        </div>
+        <div id="tests" class="section" style="display: none;">
+            <header><h1>Tests</h1></header>
+            <!-- Tests Content Here -->
+        </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/tests.js"></script>
+</body>
+</html>
